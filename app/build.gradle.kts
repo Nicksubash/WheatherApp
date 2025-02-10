@@ -65,6 +65,13 @@ dependencies {
 
     implementation ("com.squareup.picasso:picasso:2.71828")
 
+    //permision for asking locaiton:
+    implementation ("com.google.accompanist:accompanist-permissions:0.28.0")
+    implementation ("com.google.android.gms:play-services-location:21.0.1")
+    implementation ("org.jetbrains.kotlinx:kotlinx-coroutines-play-services:1.6.0")
+
+
+
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)

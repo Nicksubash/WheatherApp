@@ -12,6 +12,9 @@ interface WeatherAPI {
         @Query("q") city:String
     ): Response<WeatherModel>;
 
-
-
+    @GET("/v1/current.json")
+    suspend fun getWeatherByCoordinates(
+        @Query("key") apikey: String,
+        @Query("q") coordinates: String
+    ): Response<WeatherModel>
 }

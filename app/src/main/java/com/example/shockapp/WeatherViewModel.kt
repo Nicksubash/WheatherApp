@@ -32,8 +32,27 @@ class WeatherViewModel :ViewModel() {
         }catch (e :Exception){
             _weatherResult.value=NetworkResponse.Failed("failed to load Data")
         }
+    }
 
-
+    fun getDataByCoordinates(lat:Double,long:Double){
+        _weatherResult.value=NetworkResponse.Loading
+        viewModelScope.launch {
+            try{
+                val coordinates = "$lat,$long"
+                val response=weatherAPI.getWeatherByCoordinates(Constant.APIkey,coordinates)
+                if(response.isSuccessful){
+                    response.body()?.let{
+                        _weatherResult.value=NetworkResponse.Success(it)
+                    }?:run {
+                        _weatherResult.value=NetworkResponse.Failed("No Data Found")
+                    }
+                }else{
+                    _weatherResult.value=NetworkResponse.Failed(response.message())
+                }
+            }catch (e:Exception){
+                _weatherResult.value = NetworkResponse.Failed("Failed to load data: ${e.message}")
+            }
+        }
     }
 
 

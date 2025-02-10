@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">ShockApp</string>
+    <string name="weather_app_title">Weather App</string>
+    <string name="location_search_hint">Location to search</string>
+    <string name="search_button">Search</string>
+    <string name="humidity">Humidity</string>
+    <string name="last_updated_time">Last Updated</string>
+    <string name="city_not_found">City not found</string>
+    <string name="loading_weather_data">Fetching weather data...</string>
+    <string name="feels_like">Feels like: %1$s °C</string>
+    <string name="wind_speed">Wind: %1$s m/s</string>
 </resources>
