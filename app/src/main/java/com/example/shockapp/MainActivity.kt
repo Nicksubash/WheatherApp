@@ -16,6 +16,7 @@ class MainActivity : ComponentActivity() {
 
         val weatherViewModel=ViewModelProvider(this)[WeatherViewModel::class.java]
 
+
         setContent {
             ShockAppTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
