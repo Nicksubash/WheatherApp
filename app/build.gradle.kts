@@ -74,6 +74,10 @@ dependencies {
     implementation ("com.google.android.gms:play-services-location:21.0.1")
     implementation ("org.jetbrains.kotlinx:kotlinx-coroutines-play-services:1.6.0")
 
+    //for Video as BG
+    implementation(libs.exoplayer)
+    implementation(libs.exoplayer.ui)
+
 
 
 
